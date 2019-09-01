@@ -31,6 +31,7 @@ Application envionment variables apply to all services within the application, a
 |`WEBPASSWORD`|`mysecretpassword`|_(optional)_ password for accessing the web-based interface of Pi-hole - you won’t be able to access the admin panel without defining a password here.
 |`DNS1`|`127.0.0.1#5300`|_(optional)_ Tell Pi-hole where to forward DNS requests that aren’t blocked. We’re using the [dnscrypt-proxy](https://github.com/jedisct1/dnscrypt-proxy) project here but you can specify your own.|
 |`DNS2`|`127.0.0.1#5300`|_(optional)_ Secondary DNS server - see above.|
+|`ServerIP`|`192.168.86.22`|Set to your server's LAN IP, used by web block modes and lighttpd bind address.|
 
 ## Usage
 
