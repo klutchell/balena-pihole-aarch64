@@ -5,6 +5,7 @@ If you're looking for a way to quickly and easily get up and running with a Pi-h
 This project is a [balenaCloud](https://www.balena.io/cloud) stack with the following services:
 
 * [Pi-hole](https://hub.docker.com/r/pihole/pihole/)
+* [Unbound](https://hub.docker.com/r/klutchell/unbound/)
 
 balenaCloud is a free service to remotely manage and update your Raspberry Pi through an online dashboard interface, as well as providing remote access to the Pi-hole web interface without any additional configuation.
 
@@ -29,8 +30,8 @@ Application envionment variables apply to all services within the application, a
 |`INTERFACE`|`eth0`|As above.|
 |`ServerIP`|`192.168.86.22`|set to your server's LAN IP, used by web block modes and lighttpd bind address.|
 |`WEBPASSWORD`|`mysecretpassword`|(optional) password for accessing the web-based interface of Pi-hole - you won’t be able to access the admin panel without defining a password here.|
-|`DNS1`|`1.1.1.1`|(optional) primary upstream DNS provider, default is google DNS|
-|`DNS2`|`1.0.0.1`|(optional) secondary upstream DNS provider, default is google DNS, no if only one DNS should used|
+|`DNS1`|`127.0.0.1#53053`|(optional) primary upstream DNS provider, default is google DNS|
+|`DNS2`|`127.0.0.1#53053`|(optional) secondary upstream DNS provider, default is google DNS, no if only one DNS should used|
 
 ## Usage
 
