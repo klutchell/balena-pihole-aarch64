@@ -1,4 +1,4 @@
-FROM pihole/pihole:4.3.1-4_aarch64
+FROM pihole/pihole:4.3.2-1_aarch64
 
 # allow auth when using balena vpn
 RUN sed -i '/$AUTHORIZED_HOSTNAMES = array(/ a "balena-devices.com",' /var/www/html/admin/scripts/pi-hole/php/auth.php
