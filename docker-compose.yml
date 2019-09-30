@@ -18,12 +18,11 @@ services:
             - '1.1.1.1'
 
     # optional upstream DNS resolver: https://unbound.net/
-    # point pi-hole "Upstream DNS Servers" to 127.0.0.1#53053 to use Unbound
+    # point pi-hole "Upstream DNS Servers" to 127.0.0.1#5053 to use Unbound
     # otherwise comment out this block to disable it entirely
     unbound:
         image: klutchell/unbound:arm64v8-1.9.3
         ports:
-            - '53053:53/tcp'
-            - '53053:53/udp'
+            - '5053:5053/udp'
         volumes:
             - 'unbound:/opt/unbound/etc/unbound'
