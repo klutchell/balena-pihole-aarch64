@@ -30,8 +30,8 @@ Application envionment variables apply to all services within the application, a
 |`INTERFACE`|`eth0`|As above.|
 |`ServerIP`|`192.168.86.22`|set to your server's LAN IP, used by web block modes and lighttpd bind address.|
 |`WEBPASSWORD`|`mysecretpassword`|(optional) password for accessing the web-based interface of Pi-hole - you won’t be able to access the admin panel without defining a password here.|
-|`DNS1`|`127.0.0.1#53053`|(optional) primary upstream DNS provider, default is google DNS|
-|`DNS2`|`127.0.0.1#53053`|(optional) secondary upstream DNS provider, default is google DNS, no if only one DNS should used|
+|`DNS1`|`127.0.0.1#5053`|(optional) primary upstream DNS provider, default is google DNS|
+|`DNS2`|`127.0.0.1#5053`|(optional) secondary upstream DNS provider, default is google DNS, none if only one DNS should used|
 
 ## Usage
 
