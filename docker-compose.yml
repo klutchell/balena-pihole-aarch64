@@ -24,3 +24,5 @@ services:
             - '5053:5053/udp'
         volumes:
             - 'unbound:/opt/unbound/etc/unbound'
+        healthcheck:
+            disable: true
