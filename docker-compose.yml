@@ -17,9 +17,7 @@ services:
             - '127.0.0.1'
             - '1.1.1.1'
 
-    # optional upstream DNS resolver: https://unbound.net/
-    # point pi-hole "Upstream DNS Servers" to 127.0.0.1#5053 to use Unbound
-    # otherwise comment out this block to disable it entirely
+    # set pihole DNS1 and DNS2 service variables to 127.0.0.1#5053 to use unbound for upstream DNS
     unbound:
         image: klutchell/unbound:arm64v8-1.9.3
         ports:
