@@ -21,21 +21,15 @@ services:
         image: klutchell/unbound:arm64v8-1.9.3
         ports:
             - '5053:5053/udp'
-        healthcheck:
-            disable: true
 
     # set pihole DNS1 and DNS2 service variables to 127.0.0.1#5153 to use cloudflared for upstream DNS
     cloudflared:
         image: klutchell/cloudflared:arm64v8-2019.9.1
         ports:
             - '5153:5053/udp'
-        healthcheck:
-            disable: true
 
     # set pihole DNS1 and DNS2 service variables to 127.0.0.1#5253 to use dnscrypt-proxy for upstream DNS
     dnscrypt-proxy:
         image: klutchell/dnscrypt-proxy:arm64v8-2.0.27
         ports:
             - '5253:5053/udp'
-        healthcheck:
-            disable: true
