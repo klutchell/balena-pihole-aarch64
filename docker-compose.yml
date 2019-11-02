@@ -18,18 +18,18 @@ services:
 
     # set pihole DNS1 and DNS2 service variables to 127.0.0.1#5053 to use unbound for upstream DNS
     unbound:
-        image: klutchell/unbound:arm64v8-1.9.3
+        image: klutchell/unbound:1.9.4
         ports:
             - '5053:5053/udp'
 
     # set pihole DNS1 and DNS2 service variables to 127.0.0.1#5153 to use cloudflared for upstream DNS
     cloudflared:
-        image: klutchell/cloudflared:arm64v8-2019.9.1
+        image: klutchell/cloudflared:2019.10.4
         ports:
             - '5153:5053/udp'
 
     # set pihole DNS1 and DNS2 service variables to 127.0.0.1#5253 to use dnscrypt-proxy for upstream DNS
     dnscrypt-proxy:
-        image: klutchell/dnscrypt-proxy:arm64v8-2.0.27
+        image: klutchell/dnscrypt-proxy:2.0.31
         ports:
             - '5253:5053/udp'
